@@ -1,0 +1,197 @@
+/* Variabel Warna */
+:root {
+    --primary-color: #0046FF; /* Biru Apple/Inovasi */
+    --secondary-color: #6C757D;
+    --accent-color: #333333; /* Hitam/Abu-abu gelap untuk kontras produk */
+    --text-color: #343A40;
+    --bg-color: #F8F9FA;
+    --white-color: #FFFFFF;
+    --hero-blue: #010736; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* HEADER/NAVIGASI */
+header {
+    background-color: var(--white-color);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    font-size: 1.6em;
+    color: var(--primary-color);
+}
+
+/* Tombol Dasar */
+.btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+/* HERO SECTION (Warna Biru) */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: var(--hero-blue); 
+    color: var(--white-color);
+    margin-bottom: 40px;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+/* TOMBOL HERO (Jarak Optimal) */
+.hero-btn {
+    padding: 15px 30px; 
+    font-size: 1.1em;
+    margin-top: 25px; 
+    border-radius: 8px; 
+}
+
+/* PROFIL SECTION */
+.owner-profile {
+    padding: 50px 5%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--white-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.profile-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid var(--primary-color);
+}
+
+/* CALL TO ACTION (CTA) */
+.call-to-action {
+    text-align: center;
+    padding: 40px 5%;
+    background-color: var(--white-color);
+    margin-bottom: 40px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* FEATURED PRODUCTS GRID (Digunakan di iphone.html) */
+.featured-homes {
+    padding: 40px 5%;
+}
+
+.featured-homes h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.home-card {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.home-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain; 
+    background-color: #eee;
+    padding: 15px;
+}
+
+.home-card p {
+    color: var(--accent-color);
+    font-weight: 600;
+    padding: 10px 15px 0;
+}
+
+.btn-detail {
+    width: 90%;
+    margin: 15px 5% 15px;
+    background-color: var(--accent-color);
+    color: var(--white-color);
+}
+
+/* FOOTER & MODAL (Sama seperti sebelumnya) */
+footer {
+    background-color: var(--text-color);
+    color: var(--white-color);
+    padding: 40px 5% 10px;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1001;
+    /* ... (gaya modal lainnya) ... */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .nav-links {
+        padding: 10px 0;
+        justify-content: center;
+    }
+    .header-actions {
+        margin-top: 10px;
+    }
+}
